@@ -56,3 +56,49 @@ res = []
 for word in source:
     res.append(capitalize(word))
 print(' '.join(res))
+
+
+Задача «Возведение в степень»
+
+Дано действительное положительное число a и целое неотрицательное число n. Вычислите an не используя циклы, возведение в степень через ** и функцию math.pow(), а используя рекуррентное соотношение an=a⋅an-1.
+Решение оформите в виде функции power(a, n). 
+
+def power(a, n):
+    if n == 0:
+        return 1
+    elif a ==0 and n==0 :
+        return 1    
+    else:
+        return a * power(a, n - 1)
+ 
+print(power(float(input()), int(input())))
+
+Разворот последовательности
+
+
+
+
+
+Задача «Числа Фибоначчи»
+Условие
+Напишите функцию fib(n), которая по данному целому неотрицательному n возвращает n-e число Фибоначчи. В этой задаче нельзя использовать циклы — используйте рекурсию. 
+
+n = int(input())
+if n == 0:
+    print(0)
+else:
+    a, b = 0, 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    print(b)
+    
+    
+    
+    n = int(input())
+
+def fib(n):
+    if n < 2:
+        return n
+    else: return fib(n-1) + fib(n-2)
+
+print(fib(n))
