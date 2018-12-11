@@ -11,3 +11,13 @@ print(*sorted(set(input().split()) & set(input().split()), key=int))
 a = list(set([int(j) for j in input().split()]) & set([int(j) for j in input().split()]))
 for elem in sorted(a): # нашла ошибку через 2 года )
     print(elem, end=' ')
+4. 'Встречалось ли число раньше
+umbers = [int(s) for s in input().split()]
+occur_before = set()
+for num in numbers:
+    if num in occur_before:
+        print('YES')
+    else:
+        print('NO')
+        occur_before.add(num)'    
+    
