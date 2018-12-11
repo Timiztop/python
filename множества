@@ -1,0 +1,13 @@
+1.'количество различных чисел'
+print(len(set(input().split())))
+
+2.'количество совпадающих чисел'
+print(len(set(input().split()) & set(input().split())))
+
+3.Задача «Пересечение множеств»
+print(*sorted(set(input().split()) & set(input().split()), key=int))
+
+
+a = list(set([int(j) for j in input().split()]) & set([int(j) for j in input().split()]))
+for elem in sorted(a): # нашла ошибку через 2 года )
+    print(elem, end=' ')
